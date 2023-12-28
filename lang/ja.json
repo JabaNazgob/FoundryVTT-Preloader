@@ -3,82 +3,82 @@
         "settings": {
             "scenes": {
                 "settingName": "scenesToPreload",
-                "name": "Scene",
-                "label": "Scene",
-                "hint": "List of scenes to be preloaded by players when they enter the world"
+                "name": "シーン",
+                "label": "シーン",
+                "hint": "プレイヤーがワールドに入室した時に先読みされるシーンの一覧"
             },
             "audio": {
                 "settingName": "audioToPreload",
-                "name": "Audio",
-                "label": "Audio",
-                "hint": "List of audio files to be preloaded by players when they enter the world"
+                "name": "音声",
+                "label": "音声",
+                "hint": "プレイヤーがワールドに入室した時に先読みされる音声ファイルの一覧"
             },
             "animations": {
                 "settingName": "animationsToPreload",
-                "name": "Animations",
-                "label": "Animations",
-                "hint": "List of animations to be preloaded by players when they enter the world"
+                "name": "アニメーション",
+                "label": "アニメーション",
+                "hint": "プレイヤーがワールドに入室した時に先読みされるアニメーションの一覧"
             }
         },
         "window": {
             "title": "Preloader",
-            "placeholder": "Add (press Enter)",
+            "placeholder": "追加 (エンターキーを押す)",
             "deletionTitle": {
-                "scenes": "Remove scene from preload list?",
-                "audio": "Remove audio from preload list?",
-                "animations": "Remove animation from preload list?"
+                "scenes": "先読みの一覧からシーンを取り除きますか?",
+                "audio": "先読みの一覧から音声を取り除きますか?",
+                "animations": "先読みの一覧からアニメーションを取り除きますか?"
             },
             "deletionDescription": {
-                "scenes": "Are you sure you want to remove this scene from the preload list?",
-                "audio": "Are you sure you want to remove this track from the preload list?",
-                "animations": "Are you sure you want to remove this animation from the preload list?"
+                "scenes": "本当に先読みの一覧からこのシーンを取り除きますか？",
+                "audio": "本当に先読みの一覧からこの音声トラックを取り除きますか？",
+                "animations": "本当に先読みの一覧からこのアニメーションを取り除きますか？"
             },
             "confirmation": {
-                "cancel": "Cancel",
-                "save": "Save"
+                "cancel": "キャンセル",
+                "save": "保存"
             },
             "importer": {
-                "import-button": "Import to JSON",
-                "export-button": "Export from JSON"
+                "import-button": "JSONへ取り込み",
+                "export-button": "JSONから出力"
             },
             "guideText": {
-                "scenes": "Drag the scene to the input field, or write its id, then press \"Enter\"",
-                "audio": "Write the full path to the audio file (including the file name and its extension), then press \"Enter\"",
+                "scenes": "入力欄にシーンをドラッグするか、idを記載し、\"Enter\"を押してください",
+                "audio": "音声ファイルのパスを記載し (ファイル名と拡張子を含めて)、\"Enter\"を押してください",
                 "audio-tooltip": "IMPORTANT! Only small files of a few megabytes can be preloaded. Use audio preload for preloading short sounds requiring strict timing, such as the sound of dice sound, or weapon attack sounds",
                 "animations": "Write the full path to the file (including the file name and its extension), or, if it is a Sequencer animation, insert its \"DatabasePath\" (can be obtained in Sequencer Database Viewer), then press \"Enter\""
             }
         },
         "warning": {
             "duplicate": {
-                "scenes": "This scene is already in the list",
-                "audio": "This track is already in the list",
-                "animations": "This animation is already in the list"
+                "scenes": "このシーンは一覧に存在します",
+                "audio": "この音声トラックは一覧に存在します",
+                "animations": "このアニメーションは一覧に存在します"
             },
-            "wrongId": "You should drag SCENE into the input field",
-            "seqNotActive": "Sequencer module not found",
-            "wrongCategory": "The content of the imported JSON file does not match the category"
+            "wrongId": "入力欄には、シーンをドラッグしてください",
+            "seqNotActive": "Sequencer ＭＯＤが見つかりません",
+            "wrongCategory": "取り込んだJSONファイルの内容がカテゴリに一致しません"
         },
         "error": {
             "scenes": {
-                "uiError": "An error occurred while preloading one or more scenes (details in console)",
-                "consoleText1": "There is one or more ids of non-existent scenes in the list of scenes for preload. The other scenes were successfully preloaded.",
-                "consoleText2": "You can view the entire list in console using the command \"PreloaderApp.getScenesToPreload()\"",
-                "consoleText3": "Also, you can delete the ids of non-existent scenes using the command \"PreloaderApp.deleteScenesToPreload()\", by entering a string or array as an argument",
-                "consoleText4-1": "- Scene with id  <",
-                "consoleText4-2": ">  not found"
+                "uiError": "１つ以上のシーンを先読みした際に、エラーが発生しました (詳細はコンソール参照)",
+                "consoleText1": "存在しないシーンのidが先読み一覧内に１つ以上あります。その他のシーンは先読みに成功しました。",
+                "consoleText2": "コンソールで次のコマンドを入力すると先読みの一覧を閲覧できます：\"PreloaderApp.getScenesToPreload()\"",
+                "consoleText3": "また、コマンド\"PreloaderApp.deleteScenesToPreload()\"で文字列か配列を引数に使用することで存在しないシーンのidを削除できます",
+                "consoleText4-1": "- シーン id  <",
+                "consoleText4-2": ">  が見つかりません"
             },
             "audio": {
-                "uiError": "An error occurred while preloading one or more audio files (details in console)",
-                "consoleText1": "There is one or more paths of non-existent audio files in the list of audio files for preload. The other audio files were successfully preloaded.",
-                "consoleText2": "You can view the entire list in console using the command \"PreloaderApp.getAudioToPreload()\"",
-                "consoleText3": "Also, you can delete the paths of non-existent audio files using the command \"PreloaderApp.deleteAudioToPreload()\", by entering a string or array as an argument",
-                "consoleText4-1": "- Audio file  <",
-                "consoleText4-2": ">  not found"
+                "uiError": "１つ以上の音声ファイルを先読みした際に、エラーが発生しました (詳細はコンソール参照)",
+                "consoleText1": "存在しない音声ファイルが先読み一覧内に１つ以上あります。その他の音声ファイルは先読みに成功しました。.",
+                "consoleText2": "コンソールで次のコマンドを入力すると先読みの一覧を閲覧できます： \"PreloaderApp.getAudioToPreload()\"",
+                "consoleText3": "また、コマンド\"PreloaderApp.deleteAudioToPreload()\"で文字列か配列を引数に使用することで存在しない音声のファイルパスを削除できます",
+                "consoleText4-1": "- 音声ファイル  <",
+                "consoleText4-2": ">  が見つかりません"
             },
             "sequencer": {
-                "uiError": "An error occurred while preloading one or more animations/files (details in console)",
-                "consoleText1": "In the array of animations for preload, there is one or more names/paths of files, containing an error.",
-                "consoleText2": "You can view the entire array in console using the command \"PreloaderApp.deleteAnimationsToPreload()\", by entering a string or array as an argument"
+                "uiError": "１つ以上のアニメーションファイルを先読みした際に、エラーが発生しました (詳細はコンソール参照))",
+                "consoleText1": "先読みするアニメーションの配列内で、同一ファイルの名前・パスが複数あり、エラーが含まれます。",
+                "consoleText2": "コンソールで\"PreloaderApp.deleteAnimationsToPreload()\"コマンドを入力すると文字列か配列を引数に使用することで配列全体を閲覧できます"
             }
         }
     }
