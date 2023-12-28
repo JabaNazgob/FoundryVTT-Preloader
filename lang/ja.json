@@ -1,0 +1,85 @@
+{
+    "preloader": {
+        "settings": {
+            "scenes": {
+                "settingName": "scenesToPreload",
+                "name": "シーン",
+                "label": "シーン",
+                "hint": "プレイヤーがワールドに入室した時に先読みされるシーンの一覧"
+            },
+            "audio": {
+                "settingName": "audioToPreload",
+                "name": "音声",
+                "label": "音声",
+                "hint": "プレイヤーがワールドに入室した時に先読みされる音声ファイルの一覧"
+            },
+            "animations": {
+                "settingName": "animationsToPreload",
+                "name": "アニメーション",
+                "label": "アニメーション",
+                "hint": "プレイヤーがワールドに入室した時に先読みされるアニメーションの一覧"
+            }
+        },
+        "window": {
+            "title": "Preloader",
+            "placeholder": "追加 (エンターキーを押す)",
+            "deletionTitle": {
+                "scenes": "先読みの一覧からシーンを取り除きますか?",
+                "audio": "先読みの一覧から音声を取り除きますか?",
+                "animations": "先読みの一覧からアニメーションを取り除きますか?"
+            },
+            "deletionDescription": {
+                "scenes": "本当に先読みの一覧からこのシーンを取り除きますか？",
+                "audio": "本当に先読みの一覧からこの音声トラックを取り除きますか？",
+                "animations": "本当に先読みの一覧からこのアニメーションを取り除きますか？"
+            },
+            "confirmation": {
+                "cancel": "キャンセル",
+                "save": "保存"
+            },
+            "importer": {
+                "import-button": "JSONへ取り込み",
+                "export-button": "JSONから出力"
+            },
+            "guideText": {
+                "scenes": "入力欄にシーンをドラッグするか、idを記載し、\"Enter\"を押してください",
+                "audio": "音声ファイルのパスを記載し (ファイル名と拡張子を含めて)、\"Enter\"を押してください",
+                "audio-tooltip": "IMPORTANT! Only small files of a few megabytes can be preloaded. Use audio preload for preloading short sounds requiring strict timing, such as the sound of dice sound, or weapon attack sounds",
+                "animations": "Write the full path to the file (including the file name and its extension), or, if it is a Sequencer animation, insert its \"DatabasePath\" (can be obtained in Sequencer Database Viewer), then press \"Enter\""
+            }
+        },
+        "warning": {
+            "duplicate": {
+                "scenes": "このシーンは一覧に存在します",
+                "audio": "この音声トラックは一覧に存在します",
+                "animations": "このアニメーションは一覧に存在します"
+            },
+            "wrongId": "入力欄には、シーンをドラッグしてください",
+            "seqNotActive": "Sequencer ＭＯＤが見つかりません",
+            "wrongCategory": "取り込んだJSONファイルの内容がカテゴリに一致しません"
+        },
+        "error": {
+            "scenes": {
+                "uiError": "１つ以上のシーンを先読みした際に、エラーが発生しました (詳細はコンソール参照)",
+                "consoleText1": "存在しないシーンのidが先読み一覧内に１つ以上あります。その他のシーンは先読みに成功しました。",
+                "consoleText2": "コンソールで次のコマンドを入力すると先読みの一覧を閲覧できます：\"PreloaderApp.getScenesToPreload()\"",
+                "consoleText3": "また、コマンド\"PreloaderApp.deleteScenesToPreload()\"で文字列か配列を引数に使用することで存在しないシーンのidを削除できます",
+                "consoleText4-1": "- シーン id  <",
+                "consoleText4-2": ">  が見つかりません"
+            },
+            "audio": {
+                "uiError": "１つ以上の音声ファイルを先読みした際に、エラーが発生しました (詳細はコンソール参照)",
+                "consoleText1": "存在しない音声ファイルが先読み一覧内に１つ以上あります。その他の音声ファイルは先読みに成功しました。.",
+                "consoleText2": "コンソールで次のコマンドを入力すると先読みの一覧を閲覧できます： \"PreloaderApp.getAudioToPreload()\"",
+                "consoleText3": "また、コマンド\"PreloaderApp.deleteAudioToPreload()\"で文字列か配列を引数に使用することで存在しない音声のファイルパスを削除できます",
+                "consoleText4-1": "- 音声ファイル  <",
+                "consoleText4-2": ">  が見つかりません"
+            },
+            "sequencer": {
+                "uiError": "１つ以上のアニメーションファイルを先読みした際に、エラーが発生しました (詳細はコンソール参照))",
+                "consoleText1": "先読みするアニメーションの配列内で、同一ファイルの名前・パスが複数あり、エラーが含まれます。",
+                "consoleText2": "コンソールで\"PreloaderApp.deleteAnimationsToPreload()\"コマンドを入力すると文字列か配列を引数に使用することで配列全体を閲覧できます"
+            }
+        }
+    }
+}
